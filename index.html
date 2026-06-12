@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Очищение</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ЭКРАН: ГЛАВНАЯ (список модулей) -->
+<div id="screen-home" class="screen active">
+  <header class="home-header">
+    <h1>Очищение</h1>
+    <p>Выбери модуль и слушай</p>
+  </header>
+
+  <div class="modules">
+    <div class="module-card" data-module="1">
+      <img src="assets/module1.jpg" alt="Модуль 1">
+      <div class="module-overlay">
+        <span class="module-num">Модуль 1</span>
+        <span class="module-title">Очищение</span>
+      </div>
+    </div>
+
+    <div class="module-card" data-module="2">
+      <img src="assets/module2.jpg" alt="Модуль 2">
+      <div class="module-overlay">
+        <span class="module-num">Модуль 2</span>
+        <span class="module-title">Самоценность</span>
+      </div>
+    </div>
+
+    <div class="module-card" data-module="3">
+      <img src="assets/module3.jpg" alt="Модуль 3">
+      <div class="module-overlay">
+        <span class="module-num">Модуль 3</span>
+        <span class="module-title">Магнетизм</span>
+      </div>
+    </div>
+
+    <div class="module-card" data-module="4">
+      <img src="assets/module4.jpg" alt="Модуль 4">
+      <div class="module-overlay">
+        <span class="module-num">Модуль 4</span>
+        <span class="module-title">Здоровье и красота</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ЭКРАН: СПИСОК МЕДИТАЦИЙ ВНУТРИ МОДУЛЯ -->
+<div id="screen-module" class="screen">
+  <header class="module-header">
+    <button id="back-btn" class="back-btn">←</button>
+    <h2 id="module-title-header"></h2>
+  </header>
+
+  <div id="meditations-list" class="meditations-list"></div>
+</div>
+
+<!-- НИЖНИЙ ПЛЕЕР -->
+<div id="player-bar" class="player-bar">
+  <div class="player-info">
+    <span id="player-track-title">—</span>
+  </div>
+  <div class="player-controls">
+    <button id="player-playpause">▶</button>
+  </div>
+  <div class="player-progress">
+    <input type="range" id="player-seek" min="0" max="100" value="0">
+    <div class="player-time">
+      <span id="player-current">0:00</span>
+      <span id="player-duration">0:00</span>
+    </div>
+  </div>
+  <audio id="audio-el"></audio>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
